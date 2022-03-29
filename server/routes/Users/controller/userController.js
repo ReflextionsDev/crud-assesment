@@ -19,7 +19,7 @@ const createUserDB = async (req, res) => {
             payload: savedUser
         })
     } catch (error) {
-        res.status(500).json({ error: error })
+        res.status(500).json({ message: "Could not  user", error: error })
     }
 }
 
@@ -35,7 +35,7 @@ const getUserDB = async (req, res) => {
         })
 
     } catch (error) {
-        res.status(500).json({ error: error })
+        res.status(500).json({ message: "Could not find user", error: error })
     }
 }
 
@@ -55,7 +55,7 @@ const updateUserDB = async (req, res) => {
         })
 
     } catch (error) {
-        res.status(500).json({ error: error })
+        res.status(500).json({ message: "Could not update user", error: error })
     }
 
 }
@@ -69,7 +69,7 @@ const deleteUserDB = async (req, res) => {
             payload: deletedUser
         })
     } catch (error) {
-        res.status(500).json({ error: error })
+        res.status(500).json({ message: "Could not delete user", error: error })
     }
 }
 
